@@ -1,0 +1,21 @@
+{
+  "name": "telegram-bot-vercel-serverless-template",
+  "version": "1.0.0",
+  "description": "telegram bot deploy to vercel serverless",
+  "keywords": [
+    "vercel",
+    "serverless"
+  ],
+  "repository": {
+    "url": "https://github.com/connectshark/telegram-bot-vercel-serverless-template"
+  },
+  "author": "Chambers",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "node-telegram-bot-api": "^0.61.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^2.14.3"
+  }
+}
