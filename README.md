@@ -1,106 +1,105 @@
 # telegram-bot-vercel-serverless-template
 
-專門給新手的一個簡單的telegram機器人模板
+[TW](./readme/tw.md)
 
-點擊右上角的`Use this template`或是[點擊這裡](https://github.com/connectshark/telegram-bot-vercel-serverless-template/generate)可以馬上將此模板新增至自己的`github`中，或是可以選擇點擊按鈕[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconnectshark%2Ftelegram-bot-vercel-serverless-template&env=TELEGRAM_BOT_TOKEN)直接部署至`Vercel`上
+Here is a simple Telegram bot template specifically designed for beginners
 
-## 目錄
-- [一鍵部署](#一鍵部署)
-- [必要內容](#必要內容)
-- [本地開發](#本地開發)
-  - [複製這個專案](#複製這個專案)
-  - [設定環境變數](#設定環境變數)
-  - [取得對外DOMAIN](#取得對外domain)
-  - [設定Webhook](#設定webhook)
-- [部署](#部署)
-  - [用Vercel CLI部署](#用vercel-cli部署)
-  - [設定環境變數](#環境變數)
-  - [設定Webhook](#webhook)
+Click on the `Use this template` button in the upper right or [click here](https://github.com/connectshark/telegram-bot-vercel-serverless-template/generate) will immediately add this template to your own GitHub repository.Alternatively, you can click on the button [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconnectshark%2Ftelegram-bot-vercel-serverless-template&env=TELEGRAM_BOT_TOKEN) to directly deploy it to Vercel.
 
-## 一鍵部署
+##### The content on this page has been translated using ChatGPT
+
+
+## Table of contents
+- [One Click Deployment](#one-click-deployment)
+- [Essential Content](#essential-content)
+- [Local Development](#local-development)
+  - [Clone Project](#clone-project)
+  - [Set Environment Variable](#set-environment-variable)
+  - [Obtain External Domain](#obtain-external-domain)
+  - [Set Webhook](#set-webhook)
+- [Deployment](#Deployment)
+  - [Deploy with Vercel CLI](#deploy-with-vercel-cli)
+  - [Environment Variable](#environment-variable)
+  - [Webhook](#webhook)
+
+## One Click Deployment
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconnectshark%2Ftelegram-bot-vercel-serverless-template&env=TELEGRAM_BOT_TOKEN)
-## 必要內容
+## Essential Content
 
-在使用此模板以前必須先對以下內容有基本的認識
+Before using this template, it is important to have a basic understanding of the following content.
 
-- 取得你的Telegram bot TOKEN => [Telegram: Contact @botfather](https://t.me/botfather)
-- 安裝 Vercel CLI => [Vercel CLI Overview | CLI Commands | Vercel Docs](https://vercel.com/docs/cli)
-- 對外連網的Ngrok => [\[Day-37\] 使用 ngrok 讓外網連接你的 API - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)](https://ithelp.ithome.com.tw/articles/10197345)
+- Get Your Telegram bot TOKEN => [Telegram: Contact @botfather](https://t.me/botfather)
+- Install Vercel CLI => [Vercel CLI Overview | CLI Commands | Vercel Docs](https://vercel.com/docs/cli)
+- Install Ngrok => [\[Day-37\] 使用 ngrok 讓外網連接你的 API - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)](https://ithelp.ithome.com.tw/articles/10197345)
 
 
-## 本地開發
+## Local Development
 
-### 複製這個專案
+### Clone Project
+Click on the `Use this template` button in the upper right or [click here](https://github.com/connectshark/telegram-bot-vercel-serverless-template/generate) will immediately add this template to your own GitHub repository.
 
-你可以點擊這個專案右上角的`Use this template`或是[點擊這裡](https://github.com/connectshark/telegram-bot-vercel-serverless-template/generate)可以馬上將此模板新增至自己的`github`中，複製到本地端後進入資料夾
 
-### 設定環境變數
 
-在根目錄中新增`.env`檔案，並且新增以下內容
+### Set Environment Variable
+
+Create a `.env` file in the root directory and add the following content.
 ```bash=
 TELEGRAM_BOT_TOKEN=<TELEGRAM_BOT_TOKEN>
 ```
-將telegram提供的TOKEN設定進去
+Set the provided TOKEN from Telegram Bot.
 
-### 取得對外DOMAIN
-在終端機中輸入以下內容
+### Obtain External Domain
+Enter the following content in the terminal.
 ```
 vercel dev
 
 > Vercel CLI 30.0.0
 > Ready! Available at http://localhost:3000
 ```
-將ngrok開啟取得一個對外的URL，在另一個終端機中輸入以下內容
+Open ngrok to obtain a publicly accessible URL, then enter the following content in another terminal.
 ```
 ngrok http 3000
 ```
-即可取得一組對外連線的URL
 
-### 設定Webhook
-最後要設定Webhook，複製以下網址
+### Set Webhook
+Finally, set up the webhook and copy the following URL
 ```
 https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook?url=<Webhook_URL>
 ```
-將內容替換成自己的TOKEN和webhook url
+Replace the content with your own TOKEN and webhook URL.
 - TELEGRAM_BOT_TOKEN
 - Webhook_URL
 
-需注意Webhook URL設定的時候是 DOMAIN名稱+'/api/webhook' 整段才會對應到webhook的路徑上
-將以上內容修改完成後，在瀏覽器中開啟一頁空白頁面貼上送出即可
+Note that when setting the webhook URL, it should be DOMAIN name + '/api/webhook' to correspond to the path of the webhook. Once you have made the necessary modifications to the above content, open a blank page in your browser and paste it to submit.
 
 
 
-## 部署
+## Deployment
 
-### 用Vercel CLI部署
+### Deploy with Vercel CLI
 
-在終端機中輸入以下內容
+Enter the following content in the terminal.
 
 ```
 vercel
 ```
-即可自動部署至Vercel上
+It will be automatically deployed to Vercel.
 
-### 環境變數
+### Environment Variable
 
-前往Vercel的後台[Dashboard – Vercel](https://vercel.com/dashboard)
+Go to Vercel Dashboard[Dashboard – Vercel](https://vercel.com/dashboard)
 
-找到剛剛部署的專案後設定環境變數
-位置在這:
-```
-https://vercel.com/<YOUR_VERCEL_NAME>/<YOUR_VERCEL_PROJECT>/settings/environment-variables
-```
+After locating the recently deployed project, configure the environment variables.
 
-將自己的TOKEN設定進去即可
+Set your own bot token inside.
 
 |        KEY         |        VALUE         |
 |:------------------:|:--------------------:|
 | TELEGRAM_BOT_TOKEN | <TELEGRAM_BOT_TOKEN> |
 
 ### Webhook
-部署完成後會取得一組Vercel提供的URL，重新設定一次Webhook即可
+After completing the deployment, you will obtain a URL provided by Vercel. Simply reconfigure the webhook.
 ```
 https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook?url=<Webhook_URL>
 ```
-<TELEGRAM_BOT_TOKEN>對應的是機器人TOKEN，<Webhook_URL>則是對應Vercel的URL + '/api/webhook'
-將以上內容修改完成後，在瀏覽器中開啟一頁空白頁面貼上送出即可
+<TELEGRAM_BOT_TOKEN> corresponds to the bot's TOKEN, and <Webhook_URL> corresponds to the Vercel URL + '/api/webhook'. Once you have made the necessary modifications to the above content, open a blank page in your browser, paste it, and submit.
