@@ -7,9 +7,13 @@
     "serverless"
   ],
   "repository": {
-    "url": "https://github.com/connectshark/telegram-bot-vercel-serverless-template"
+    "url": "https://github.com/connectshark/telegram-bot-vercel-serverless-template",
+    "type": "git"
   },
-  "author": "Chambers",
+  "author": {
+    "name": "Chambers",
+    "email": "bobhus394@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
